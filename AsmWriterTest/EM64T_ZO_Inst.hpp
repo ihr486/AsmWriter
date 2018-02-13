@@ -1,17 +1,21 @@
+/*
+ * EM64T instruction table (4) : ZO instructions without implicit operands
+ * CLC, CLD, CMC, LFENCE, MFENCE, NOP, PAUSE, RET, SFENCE, STC, STD
+ */
 #define ASMWRITER_ZO_INST(mnemonic, code8) \
     void mnemonic() \
     { \
-        emit(#mnemonic, EM64TOpcode<uint8_t>(code8)); \
+        emit(#mnemonic, EM64TOpcode(code8)); \
     }
 #define ASMWRITER_ZO_INST2(mnemonic, code8a, code8b) \
     void mnemonic() \
     { \
-        emit(#mnemonic, EM64TOpcode<uint8_t>(code8a, code8b)); \
+        emit(#mnemonic, EM64TOpcode(code8a, code8b)); \
     }
 #define ASMWRITER_ZO_INST3(mnemonic, code8a, code8b) \
     void mnemonic() \
     { \
-        emit(#mnemonic, EM64TOpcode<uint8_t>(0x0F, code8a, code8b)); \
+        emit(#mnemonic, EM64TOpcode(0x0F, code8a, code8b)); \
     }
 
 ASMWRITER_ZO_INST(clc, 0xF8)

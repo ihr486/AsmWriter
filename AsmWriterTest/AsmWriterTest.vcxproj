@@ -153,6 +153,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AsmWriterEM64T.hpp" />
+    <ClInclude Include="EM64TOpcode.h" />
+    <ClInclude Include="EM64TOperand.h" />
+    <ClInclude Include="EM64TReg.h" />
     <ClInclude Include="EM64T_RMcc_Inst.hpp" />
     <ClInclude Include="EM64T_RMI1_Inst.hpp" />
     <ClInclude Include="EM64T_RMI2_Inst.hpp" />
